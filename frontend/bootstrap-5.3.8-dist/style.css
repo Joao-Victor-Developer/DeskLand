@@ -1,0 +1,8 @@
+/* style.css */
+.bg-header { background-color: #5D9CEC; }
+.btn-header { background-color: #48CFAD; color: white; border-radius: 20px; font-weight: bold; }
+.bg-footer { background-color: #0A192F; color: white; font-size: 12px; }
+.box-roxo { background-color: #A390EE; border-radius: 20px; padding: 20px; }
+.box-cinza { background-color: #E6E6E6; border-radius: 20px; padding: 20px; }
+.badge-vendido { background-color: #999; color: white; padding: 5px 15px; border-radius: 20px; position: absolute; bottom: 20px; left: 20px; }
+.cart-icon { font-size: 24px; color: #E74C3C; }
