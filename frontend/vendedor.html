@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deskland - Painel do Vendedor</title>
+  <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header class="bg-header py-3">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <a href="index.html" class="text-decoration-none text-dark bg-white px-2 py-1 rounded"><strong>🖥️ DESKLAND</strong></a>
+      <nav class="d-flex flex-wrap gap-2">
+        <a href="index.html" class="btn btn-header px-4">Início</a>
+        <a href="produtos.html" class="btn btn-header px-4">Ver loja</a>
+        <a href="vendedor.html" class="btn btn-header px-4" aria-current="page">Painel do vendedor</a>
+      </nav>
+      <span class="cart-icon" aria-hidden="true">🖥️</span>
+    </div>
+  </header>
+
+  <main class="container my-5 flex-grow-1">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+      <div class="box-roxo flex-grow-1">
+        <p class="text-uppercase fw-bold mb-1">Central do vendedor</p>
+        <h1 class="h2 mb-2">Bem-vindo à sua loja!</h1>
+        <p class="mb-0">Gerencie seus anúncios, acompanhe as vendas e mantenha seu catálogo atualizado.</p>
+      </div>
+      <a href="produtos.html" class="btn btn-success rounded-pill px-4 py-3">＋ Cadastrar produto</a>
+    </div>
+
+    <section class="row g-3 mb-4" aria-label="Resumo da loja">
+      <div class="col-sm-6 col-lg-4"><div class="box-cinza h-100"><p class="text-muted mb-1">Produtos ativos</p><p class="h2 mb-0">0</p></div></div>
+      <div class="col-sm-6 col-lg-4"><div class="box-cinza h-100"><p class="text-muted mb-1">Pedidos recebidos</p><p class="h2 mb-0">0</p></div></div>
+      <div class="col-sm-6 col-lg-4"><div class="box-cinza h-100"><p class="text-muted mb-1">Vendas realizadas</p><p class="h2 mb-0">R$ 0,00</p></div></div>
+    </section>
+
+    <section class="box-cinza" aria-labelledby="anuncios-titulo">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+        <div><h2 id="anuncios-titulo" class="h4 mb-1">Meus anúncios</h2><p class="text-muted mb-0">Consulte e organize os produtos da sua loja.</p></div>
+        <a href="produtos.html" class="btn btn-outline-primary rounded-pill px-4">Ver catálogo</a>
+      </div>
+      <div class="bg-white rounded p-4 text-center">
+        <div class="fs-1" aria-hidden="true">🛍️</div>
+        <h3 class="h5">Você ainda não tem anúncios</h3>
+        <p class="text-muted mb-3">Cadastre seu primeiro produto para começar a vender na Deskland.</p>
+        <a href="produtos.html" class="btn btn-success rounded-pill px-4">Adicionar primeiro produto</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-footer py-4 mt-auto">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>🖥️ DESKLAND</span><span>Central do Vendedor</span>
+    </div>
+  </footer>
+</body>
+</html>
