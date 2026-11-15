@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'cliente') {
+    header('Location: login.php');
+    exit;
+}
+?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -14,7 +22,7 @@
       <nav class="d-flex flex-wrap gap-2">
         <a href="index.html" class="btn btn-header px-4">Início</a>
         <a href="produtos.html" class="btn btn-header px-4">Produtos</a>
-        <a href="cliente.html" class="btn btn-header px-4" aria-current="page">Minha conta</a>
+        <a href="cliente.php" class="btn btn-header px-4" aria-current="page">Minha conta</a>
       </nav>
       <a href="produtos.html" class="cart-icon text-decoration-none" aria-label="Ver produtos">🛒</a>
     </div>
@@ -23,9 +31,11 @@
   <main class="container my-5 flex-grow-1">
     <div class="box-roxo mb-4">
       <p class="text-uppercase fw-bold mb-1">Área do cliente</p>
-      <h1 class="h2 mb-2">Olá, cliente!</h1>
+      <h1 class="h2 mb-2">Olá, <?php echo htmlspecialchars($_SESSION['user_name'], ENT_QUOTES, 'UTF-8'); ?>!</h1>
       <p class="mb-0">Acompanhe seus pedidos e encontre os próximos componentes do seu setup.</p>
     </div>
+
+    <p>Você está logado como: <?php echo htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8'); ?> · <a href="logoff.php">Sair</a></p>
 
     <div class="row g-4">
       <section class="col-lg-8" aria-labelledby="pedidos-titulo">
